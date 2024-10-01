@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <title>Cadastro de Evento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho-topo">
+            <a href="index.html"><img src="imagens/logoVermelha.svg" alt="Login"></a>
+            <div class= "cabecalho-botoes">
+                <a href="/">Home</a>
+                <a href="/cadastro.html"  id="botao-cadastro-evento" style="display: none;">Cadastro de evento</a>
+                <a href="/login" id="botao-login">Login</a>
+                <a href="/logout" id="botao-sair" style="display: none;">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5 mb-5">
+        <h1>Cadastro de Evento</h1>
+        <form id="formEvento" method="post" action="#">
+            <input type="hidden" id="codigo" name="codigo">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome do Evento</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="avaliacao" class="form-label">Avaliação</label>
+                    <input type="number" class="form-control" id="avaliacao" name="avaliacao" step="0.1" min="0" max="5" required>
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="dataInicio" class="form-label">Data de Início</label>
+                    <input type="date" class="form-control" id="dataInicio" name="dataInicio" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="dataFim" class="form-label">Data de Fim</label>
+                    <input type="date" class="form-control" id="dataFim" name="dataFim" required>
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="valorPista" class="form-label">Valor Pista (R$)</label>
+                    <input type="number" class="form-control" id="valorPista" name="valorPista" step="0.01" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="valorVip" class="form-label">Valor VIP (R$)</label>
+                    <input type="number" class="form-control" id="valorVip" name="valorVip" step="0.01" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="valorCamarote" class="form-label">Valor Camarote (R$)</label>
+                    <input type="number" class="form-control" id="valorCamarote" name="valorCamarote" step="0.01" required>
+                </div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição do Evento</label>
+                <textarea class="form-control" id="descricao" name="descricao" rows="3" required></textarea>
+            </div>
+    
+            <button type="submit" id="botaoConfirmacao" class="btn btn-primary">Cadastrar</button>
+            <button type="button" class="btn btn-secondary">Cancelar</button>
+        </form>
+        <div id="mensagem"></div>
+        
+        <h4 class="mt-4">Lista de Eventos</h4>
+        <div id="containerTabela"></div>
+    </div>
+
+    <footer class="rodape">
+        <p>Copyright; 2023 - by Pamela Delatorre</p>
+    </footer>
+    <!-- Adicione o Bootstrap Icons se você usar ícones -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script src="./js/menu.js"></script>
+<script src="./js/evento.js"></script>
+</html>

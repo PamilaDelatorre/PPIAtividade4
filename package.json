@@ -1,0 +1,26 @@
+{
+  "name": "ticketingressos",
+  "version": "1.0.0",
+  "description": "Atividade 1- modulo 1 - ADS - EAD",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PamilaDelatorre/PPIAtividade4.git"
+  },
+  "author": "Pamila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PamilaDelatorre/PPIAtividade4/issues"
+  },
+  "homepage": "https://github.com/PamilaDelatorre/PPIAtividade4#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0"
+  },
+  "keywords": []
+}
